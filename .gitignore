@@ -1,0 +1,43 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Diretórios de build
+dist/
+build/
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+
+# Cache do Yarn
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.pnp.*
+.pnp.js
+
+# Cache do Node.js
+.cache/
+.nyc_output/
+coverage/
+
+# Logs
+logs/
+*.log
+*.gz
+
+# IDEs e editores
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
