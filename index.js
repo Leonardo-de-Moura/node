@@ -15,7 +15,7 @@ let customers = [
 
 server.get("/customers", (req, res) => {
   return res.json(customers);
-})
+});
 
 server.get("/customers/:id", (req, res) => {
   const id = parseInt(req.params.id);
@@ -23,6 +23,17 @@ server.get("/customers/:id", (req, res) => {
   const status = customer ? 200 : 404;
   return res.status(status).json(customer);
 
-})
+});
+
+server.post("/customers", (req, res) => {
+  const { name, site } = req.body;
+  const nextId = customers[customers.length - 1].id + 1;
+  const newCustomer = {id, name, site};
+
+  customers.push(newCustomer);
+
+  return res.status(201).json(newCustomer);
+});
+
 server.listen(3000);
 
